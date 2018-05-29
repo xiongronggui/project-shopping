@@ -1,0 +1,320 @@
+.mobile-header {
+  display: none;
+}
+/******orderList******/
+.orderList {
+  margin-top: 40px;
+}
+.orderList .titTab {
+  border-bottom: 1px solid #6d6d6d;
+}
+.orderList .titTab .tab {
+  display: inline-block;
+  color: #848484;
+  height: 36px;
+  line-height: 18px;
+  margin-right: 35px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.orderList .titTab .tab.active {
+  color: #111;
+  border-bottom: 2px solid #346fad;
+}
+.orderList .lists .listDetail {
+  width: 100%;
+}
+.orderList .lists .head span {
+  height: 60px!important;
+  line-height: 60px!important;
+  color: #111!important;
+  vertical-align: top;
+}
+.orderList .lists .listDetail.body {
+  border: 1px solid #e5ecff;
+  margin-bottom: 10px;
+}
+.orderList .lists .orderId {
+  display: inline-block;
+  width: 1000px;
+  line-height: 50px;
+  background: #e5ecff;
+  color: #111;
+  font-weight: bold;
+  text-indent: 20px;
+}
+.orderList .lists .orderImg {
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  line-height: 160px;
+  text-align: center;
+}
+.orderList .lists .orderImg img {
+  width: 100px;
+  height: 100px;
+}
+.orderList .lists .orderName {
+  display: inline-block;
+  width: 68px;
+  height: 160px;
+  line-height: 160px;
+  text-align: center;
+  color: #777779;
+}
+.orderList .lists .orderPrice,.orderList .lists .orderUnitPrice,.orderList .lists .orderGoodsNum {
+  display: inline-block;
+  width: 130px;
+  height: 160px;
+  line-height: 160px;
+  text-align: center;
+  color: #e4393c;
+}
+.orderList .lists .orderUnitPrice{
+	width:120px;
+	color: #777779;
+}
+.orderList .lists .orderPrice{
+	width:200px;
+}
+.orderList .lists .orderGoodsNum{
+	width: 120px;
+	color: #777779;
+}
+.orderList .lists .orderStatus {
+  display: inline-block;
+  width: 120px;
+  height: 160px;
+  line-height: 160px;
+  text-align: center;
+  color: #777779;
+}
+.orderList .lists .orderOperate {
+  position: relative;
+  display: inline-block;
+  width: 186px;
+  height: 160px;
+  line-height: 160px;
+  text-align: center;
+  vertical-align: bottom;
+}
+.orderList .lists .orderOperate .nowPay,
+.orderList .lists .orderOperate .closeOrder,
+.orderList .lists .orderOperate .sendPwd,
+.orderList .lists .orderOperate .deleteOrder {
+  display: inline-block;
+  width: 120px;
+  line-height: 34px;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.orderList .lists .orderOperate .nowPay {
+  position: absolute;
+  top: 32px;
+  left: 30px;
+}
+.orderList .lists .orderOperate .closeOrder {
+  position: absolute;
+  top: 92px;
+  left: 30px;
+}
+.orderList .lists .orderOperate .nowPay,
+.orderList .lists .orderOperate .sendPwd {
+  background: #e4393c;
+  color: #fff;
+}
+.orderList .lists .orderOperate .closeOrder,
+.orderList .lists .orderOperate .deleteOrder {
+  color: #346fad;
+  border: 1px solid #346fad;
+}
+.orderList .lists .orderOperate.unpay {
+  vertical-align: top;
+}
+.orderList .lists .orderOperate.unpay .sendPwd,
+.orderList .lists .orderOperate.unpay .deleteOrder {
+  display: none;
+}
+.orderList .lists .orderOperate.hasPay .nowPay,
+.orderList .lists .orderOperate.hasPay .closeOrder,
+.orderList .lists .orderOperate.hasPay .deleteOrder {
+  display: none;
+}
+.orderList .lists .orderOperate.hasClose .nowPay,
+.orderList .lists .orderOperate.hasClose .closeOrder,
+.orderList .lists .orderOperate.hasClose .sendPwd {
+  display: none;
+}
+.orderList .pager{
+	text-align: right;
+	padding:10px 0;
+}
+.orderList .pager a{
+	padding: 3.5px 8px;
+	background: #fff;
+	border:1px solid #ccc;
+	color:#333;
+	margin-right:5px;
+	line-height:1;
+	border-radius:2px;
+}
+.orderList .pager span a{
+	padding: 3.5px 8px;
+	background: #346fad;
+	border:1px solid #346fad;
+	color:#fff;
+	margin-right:5px;
+	line-height:1;
+	border-radius:2px;
+}
+/******WAP******/
+@media only screen and (max-width: 768px) {
+  /******mobile-header******/
+  .mobile-header {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    line-height: .43rem;
+    height: .43rem;
+    font-size: .15rem;
+    text-align: center;
+    border-bottom: 1px solid #e1e1e1;
+    font-weight: bold;
+	background: #fff;
+  }
+  .mobile-header .goback {
+    display: inline-block;
+    position: absolute;
+    width: .1rem;
+    height: .15rem;
+    background: url("../img/goback.png") no-repeat center;
+    background-size: 100% 100%;
+    top: .15rem;
+    left: .15rem;
+  }
+  .mobile-header .gohome {
+    display: inline-block;
+    position: absolute;
+    width: .18rem;
+    height: .18rem;
+    background: url("../img/gohome.png") no-repeat center;
+    background-size: 100% 100%;
+    top: .13rem;
+    right: .15rem;
+  }
+  /******orderList*******/
+  .orderList {
+    margin-top: .43rem;
+  }
+  .orderList .titTab {
+    border-bottom: 1px solid #e1e1e1;
+    padding: 0 .15rem;
+    height: .44rem;
+  }
+  .orderList .titTab .tab {
+    font-size: .15rem;
+    font-weight: normal;
+    height: .44rem;
+    line-height: .44rem;
+    vertical-align: top;
+  }
+  .orderList .lists {
+    padding: .1rem .15rem 0;
+  }
+  .orderList .lists .head {
+    display: none;
+  }
+  .orderList .lists .body {
+    position: relative;
+  }
+  .orderList .lists .body .orderId {
+    width: 100%;
+    line-height: .4rem;
+    height: .4rem;
+  }
+  .orderList .lists .body .orderImg {
+    width: .8rem;
+    height: .9rem;
+    padding: .15rem 0;
+    float: left;
+  }
+  .orderList .lists .body .orderImg img {
+    width: .6rem;
+    height: .6rem;
+    vertical-align: top;
+  }
+  .orderList .lists .body .orderName {
+    margin-top: .12rem;
+  }
+  .orderList .lists .body .orderName,
+  .orderList .lists .body .orderPrice,
+  .orderList .lists .body .orderStatus,
+  .orderList .lists .body .orderUnitPrice,
+  .orderList .lists .body .orderGoodsNum{
+    float: left;
+    width: 2rem;
+    height: .18rem;
+    line-height: .2rem;
+    font-size: .12rem;
+    text-align: left;
+  }
+  .orderList .lists .body .orderStatus{
+	margin-bottom: .12rem;
+  }
+  .orderList .lists .body .orderOperate {
+    position: absolute;
+    top: .4rem;
+    right: 0;
+    width: .97rem;
+    height: .9rem;
+	line-height: .9rem;
+    padding: 0;
+    text-align: center;
+    float: right;
+  }
+  .orderList .lists .body .orderOperate .nowPay,
+  .orderList .lists .body .orderOperate .closeOrder,
+  .orderList .lists .body .orderOperate .sendPwd,
+  .orderList .lists .body .orderOperate .deleteOrder {
+    width: .8rem;
+    height: .28rem;
+    line-height: .28rem;
+    text-align: center;
+    border-radius: .04rem;
+  }
+  .orderList .lists .body .nowPay {
+    top: .12rem;
+    left: .1rem;
+  }
+  .orderList .lists .body .closeOrder {
+    top: .48rem;
+    left: .1rem;
+  }
+  .orderList .lists .body .orderOperate.unpay {
+    line-height: .45rem;
+  }
+  .orderList .lists .body .orderOperate.hasPay,
+  .orderList .lists .body .orderOperate.hasClose {
+    line-height: .9rem;
+  }
+  .orderList .pager{
+	padding:.1rem .15rem;
+  }
+  .orderList .pager a{
+	padding: 0 .05rem;
+	margin-right:.05rem;
+	font-size:.12rem;
+	border-radius: .02rem;
+  }
+  .orderList .pager span a{
+	padding: 0 .05rem;
+	margin-right:.05rem;
+	font-size:.12rem;
+	border-radius: .02rem;
+  }
+}

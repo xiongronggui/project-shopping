@@ -1,0 +1,49 @@
+{include file="header.html"}
+	<div class="main-content">
+		<div class="breadcrumbs">
+			管理员添加
+		</div>
+		<div class="page-content">
+			<div class="linkmodify">
+				<form action="admin.php?op=save&t=add" method="post">
+				<div class="linkbox">
+					<div>
+						<span class="tit">用户名：</span>
+						<input type="text" name="username" placeholder="输入内容" required="required" />
+					</div>
+					<div>
+						<span class="tit">密码：</span>
+						<input type="password" name="password" placeholder="输入内容" required="required" />
+					</div>
+					<div>
+						<span class="tit">角色组：</span>
+						<select name="group_id" class="select-long">
+							{section name=show loop=$result}
+							<option value="{$result[show].id}">{$result[show].group}</option>
+							{/section}
+						</select>
+					</div>
+					<div>
+						<span class="tit">真实姓名：</span>
+						<input type="text" name="realname" placeholder="输入内容" required="required" />
+					</div>
+					<div>
+						<span class="tit">状态：</span>
+						<div class="checkBox" style="margin: 0;line-height:40px;">
+							<div style="padding-left: 10px;width: inherit;left: 0;">
+								<label><input type="radio" name="status" value="0" checked>&nbsp;正常</label>
+								<label><input type="radio" name="status" value="1">&nbsp;停用</label>
+							</div>
+						</div>
+					</div>
+					<div>
+						<button type="submit" class="btn" id="submit" style="margin-left: 30%">提交</button>
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{$server_name.name}</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/headFoot.css">
+	<link rel="stylesheet" href="css/orderList.css">
+</head>
+<body>
+{include file="header.html"}
+	<div class="mobile-header">
+		<span class="goback"></span>
+		订单管理
+		<span class="gohome"></span>
+	</div>
+	<div class="orderList">
+		<div class="wrap">
+			<div class="titTab">
+				<span class="tab active">所有订单</span>
+			</div>
+			{if $result.nums != 0}
+			<ul class="lists">
+				<li class="listDetail head">
+					<span class="orderImg"></span>
+					<span class="orderName">商品</span>
+					<span class="orderUnitPrice">单价</span> 
+					<span class="orderGoodsNum">数量</span> 
+					<span class="orderPrice">合计金额（人民币）</span>
+					<span class="orderStatus">交易状态</span>
+					<span class="orderOperate">操作</span>
+				</li>
+				{section name=show loop=$result.result}
+				<li class="listDetail body cl">
+					<span class="orderId">
+						<span class="orderTime">{$result.result[show].addtime_show}</span>
+						订单号：<span class="orderNum">{$result.result[show].order_id}</span>
+					</span>
+					<span class="orderId">
+						<lable style='color:red'>兑换码</lable>：<span class="orderNum codepwd" style="color: red;">{$result.result[show].order_code}</span>&nbsp;&nbsp;&nbsp;&nbsp;
+						<label class="seecode" val='{$result.result[show].order_id}'><img style="cursor: pointer;" src="../shopp/img/eyeclose.png" /></label>
+					</span>
+					<span class="orderImg eyeimg">
+						<img src="{$result.result[show].images_show}" alt="{$result.result[show].goods}" title="{$result.result[show].goods}">
+					</span>
+					<span class="orderName">{$result.result[show].goods}</span>
+					<span class="orderUnitPrice">¥1.00</span>
+					<span class="orderGoodsNum">{$result.result[show].count} 个</span>
+					<span class="orderPrice">{$result.result[show].total_show}（约{$result.result[show].price_show}）</span>
+					<span class="orderCode">{$result.result[show].order_status_show}</span>
+					<span class="orderOperate">
+						{$result.result[show].button}
+					</span>
+				</li>
+				{/section}
+			</ul>
+			<div class="pager">
+				{$result.page_info}
+			</div>
+			{else}
+			<div style="line-height:50px;text-align:center;font-size:16px;">
+				暂无订单
+			</div>
+			{/if}
+		</div>
+	</div>
+ {include file="footer.html"}
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/public.js"></script>
+<script>
+	function send_sms_code(order_id)
+	{
+		$.ajax({
+			type: "post",
+			url: "ucenter.php",
+			data: { "op": "send_sms_code", "order_id": order_id },
+			dataType: "json",
+			success: function (data) {
+				alert(data.Message);
+			}
+		});
+	}
+	(function($){
+		$('.seecode').on('click',function(){
+			orderid = $(this).attr('val');
+			$this = $(this);
+			$.ajax({
+				type: "post",
+				url: "ucenter.php",
+				data: { "op": "see_code", "order_id": orderid },
+				dataType: "json",
+				success: function (data) {
+					if(data.IsSuccess){
+						$this.parent().find('span.codepwd').html(data.Message);
+					}else{
+						alert(data.Message);
+					}
+					
+				}
+			});
+		});
+	})(jQuery);
+	</script>
+</html>

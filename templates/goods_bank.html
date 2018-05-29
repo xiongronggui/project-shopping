@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{$server_name.name}</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/headFoot.css">
+    <link rel="stylesheet" href="css/goods_bank.css">
+</head>
+
+<body class="bank">
+    {include file="header.html"}
+    <div class="wrap">
+      <ul class="banklist cl">
+	   {section name=show loop=$bank_list}
+         <li>
+              <div class="li-c">
+                  <i class="icon-bank icon-bank-{$bank_list[show].id}" ></i>
+              </div>
+          </li>
+       {/section}
+      </ul>
+      <form action="goods_order.php?op=order_pay" method="post" id="orderConfirm">
+        <input type="hidden" id="id" value='0'>
+        <input type="hidden" id="sel_bank" name="sel_bank">
+        <a class="modal-button modal-button-primary btn-buy">支付</a>
+      </form>
+    </div>
+    {include 
+    file="footer.html"
+    }
+</body>
+<script src="js/jquery.min.js "></script>
+<script src="js/public.js"></script>
+<script type="text/javascript">
+(function($){
+  $('#id').val($.getParams('id'));
+  $('.banklist li').click(function(){
+    var cla = $(this).find('i').attr('class');
+    var bank = cla .substr(cla .lastIndexOf("-")+1);
+      $('#sel_bank').val(bank);
+      $('.banklist li').removeClass('active');
+      $(this).addClass('active');
+    });
+  $('.modal-button').click(function(){
+      var  bank = $('#sel_bank').val();
+      if(bank == ""){
+        alert('请选择银行');
+        return;
+      }
+      $("#orderConfirm").attr('action','goods_order.php?op=order_pay&id='+$('#id').val()+'&bankcode='+bank);
+      $("#orderConfirm").submit();
+  });
+})(jQuery);
+    
+</script>
+</html>

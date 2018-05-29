@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{$server_name.name}</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/headFoot.css">
+	<link rel="stylesheet" href="css/myCashier.css">
+</head>
+<body>
+{include file="header.html"}
+	<div class="mobile-header">
+		<span class="goback"></span>
+		我的收银台
+		<span class="gohome"></span>
+	</div>
+	<div class="firmOrder">
+		<div class="wrap">
+			<form method="post" action="https://pg.openepay.com/gateway/index.do" id="orderPay">
+				<div class="tit">我的收银台</div>
+				<input type="hidden" name="inputCharset" id="inputCharset" value="{$kailiantong_config.inputCharset}">
+				<input type="hidden" name="pickupUrl" id="pickupUrl" value="{$kailiantong_config.pickupUrl}">
+				<input type="hidden" name="receiveUrl" id="receiveUrl" value="{$kailiantong_config.receiveUrl}">
+				<input type="hidden" name="version" id="version" value="{$kailiantong_config.version}">
+				<input type="hidden" name="language" id="language" value="{$kailiantong_config.language}">
+				<input type="hidden" name="signType" id="signType" value="{$kailiantong_config.signType}">
+				<input type="hidden" name="merchantId" id="merchantId" value="{$kailiantong_config.merchantId}">
+				<input type="hidden" name="orderNo" id="orderNo" value="{$kailiantong_config.orderNo}"><!--订单编号-->
+				<input type="hidden" name="orderAmount" id="orderAmount" value="{$kailiantong_config.orderAmount}"><!--支付金额-->
+				<input type="hidden" name="orderCurrency" id="orderCurrency" value="{$kailiantong_config.orderCurrency}">
+				<input type="hidden" name="orderDatetime" id="orderDatetime" value="{$kailiantong_config.orderDatetime}"><!--下单时间-->
+				<input type="hidden" name="productName" id="productName" value="{$kailiantong_config.productName}"><!--商品名称-->
+				<input type="hidden" name="payType" id="payType" value="{$kailiantong_config.payType}">
+				<input type="hidden" name="signMsg" id="signMsg" value="{$kailiantong_config.signMsg}">
+				<div class="orderInfo">
+					<div class="orderNum">订 单 号 ：<span>{$order_pay_info.order_id}</span></div>
+					<div class="orderName">商品名称：<span>{$order_pay_info.goods}</span></div>
+					<div class="orderName">单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：<span>$1.00</span></div>
+					<div class="orderName">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量：<span>{$order_pay_info.count} 个</span></div>
+					<div class="orderName">下单时间：<span>{$order_pay_info.addtime_show}</span></div>
+					<div class="orderPrice">交易金额：<span>{$order_pay_info.price_show}（约{$order_pay_info.total_show}）</span></div>
+				</div>
+				<div class="payWayList cl">
+					<div class="payWay1 payWay cl active">
+						<!--<div class="fl way">
+							通道1
+						</div>-->
+						<div class="fr price">
+							支付&nbsp;&nbsp;<span class="num">{$order_pay_info.total_show}</span>
+						</div>
+					</div>
+					<!--<div class="payWay1 payWay cl">
+						<div class="fl way">
+							通道1
+						</div>
+						<div class="fr price">
+							支付&nbsp;&nbsp;<span class="num">{$order_pay_info.total_show}</span>
+						</div>
+					</div>-->
+					<div class="nowBuyBtn fr">
+						确认支付
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+ {include file="footer.html"}
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/public.js"></script>
+<script>
+	//(function($,win){
+		//var payWay = $(".payWayList .payWay");
+		//payWay.click(function(){
+			//payWay.removeClass("active");
+			//$(this).addClass("active");
+		//})
+	//})(jQuery,window);
+
+	$(document).ready(function(){
+		$(".nowBuyBtn").click( function () {
+			$("#orderPay").submit();
+		});
+	});
+</script>
+</html>

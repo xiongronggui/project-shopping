@@ -1,0 +1,256 @@
+.banklist {padding: 40px 0 40px 65px;}
+
+
+.banklist li {
+    border: 1px solid #dedede;
+    border-radius: 8px;
+    float: left;
+    box-sizing: border-box;
+    display: table;
+    margin-bottom: 14px;
+    height: 74px;
+    cursor: pointer;
+    position: relative;
+    color: #292929;
+    font-size: 16px;
+    width: 200px;
+    margin-right: 28px;
+}
+
+.banklist li:hover,.banklist li:active,.banklist li.active {
+    border: 1px solid transparent;
+}
+
+.banklist li:hover:before,.banklist li:active:before,.banklist li.active:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 2px solid #d7a220;
+    border-radius: 8px;
+}
+
+.banklist li.active:after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    right: -3px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMTM4IDc5LjE1OTgyNCwgMjAxNi8wOS8xNC0wMTowOTowMSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTcgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjI3ODc0QjQ4QjIxOTExRTc4Njg5QjEzRDZBMTNGN0VCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjI3ODc0QjQ5QjIxOTExRTc4Njg5QjEzRDZBMTNGN0VCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6Mjc4NzRCNDZCMjE5MTFFNzg2ODlCMTNENkExM0Y3RUIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6Mjc4NzRCNDdCMjE5MTFFNzg2ODlCMTNENkExM0Y3RUIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz5pk5HJAAABWElEQVR42mK8tkSegRKgGf0Ar/z1pQr1TAw0BCALgFQDE60tALGZaG0BTSxBt4DqlmCzgKqW4LKAapbgswAEGCnNJ0CA1wJq+ISgBZRaQpQFlFhCtAXkWkKSBeRYQrIFpFpClgWkWELQAkZGFgYxwwoGOeelZFmCYgHIMAZGZlQLmNkZJMxaGIQ0khn+/vpIsiUYPlDy2cUg57SQgZVHFmQ8AzMbH4OUZS8Dv3IIw4c7KxieHy/BMISF1CD69fk+A7ekHYO4cR3DuxtzGUT1ixk4hQ0Y3l6ZyvDmymSG///+EF2s4IwDRiY2BkHVKLDhTKy8DP/+fGd4db6d4f3tJQxAG7Bp+cJCaiT///eL4d2tRQwsXBIMAsphDK8vT2T4cHclLgtA4Aq6T8hOpnhAPhONLbgExDOZaGjBRSD2AjaZfrJQ2YKvoDoMiIGpgGE60IJfIEGAAAMALXVvNaGV5vQAAAAASUVORK5CYII=);
+    width: 25px;
+    height: 25px;
+}
+
+.banklist li.active:before {
+}
+
+.banklist .li-c {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.banklist .li-c p {
+    text-align: left;
+    font-size: 16px;
+    color: #292929;
+}
+
+.banklist .li-c span {
+    text-align: left;
+    color: #858585;
+    font-size: 12px;
+    display: block;
+}
+
+.banklist li.disabled,.banklist li.disabled:hover {
+    background: #f1f1f1;
+    border-color: #dedede;
+    cursor: default;
+}
+
+.banklist li.disabled:before {
+    content: none;
+}
+
+.banklist li.disabled i {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray;
+}
+
+.banklist li.disabled p {
+    color: #c0c0c0;
+}
+
+.banklist li.disabled span {
+    color: #d3d3d3;
+}
+
+
+.banklist li {
+    /* width: 20%; */
+    /* margin-right: 5%; */
+}
+
+.btn-pay {
+    margin: 33px 0 120px;
+}
+
+.banklist li.empty,.banklist li.empty:hover {
+    border: 0!important;
+    text-align: center;
+    width: 100%;
+    padding-top: 100px;
+}
+
+.banklist li.empty:before,.banklist li.empty:after {
+    content: none;
+}
+
+.icon-banks-down {
+    width: 0;
+    height: 0;
+    border-left: 6.5px solid transparent;
+    border-right: 6.5px solid transparent;
+    border-top: 6px solid #a1a1a1;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.icon-bank {
+    width: 142px;
+    height: 40px;
+    background: url(../img/icon-banks.jpg?v);
+    display: inline-block;
+    background-position: 0 -1048px;
+}
+/*温州*/
+.icon-bank-wzcb {
+    background-position: 0 -40px;
+}
+/*浙商*/
+.icon-bank-zsbc,.icon-bank-czb {
+    background-position: 0 -520px;
+}
+/*农业*/
+.icon-bank-abc {
+    background-position: 0 -80px;
+}
+/*北京*/
+.icon-bank-bccb,.icon-bank-bob {
+    background-position: 0 -120px;
+}
+/*中国银行*/
+.icon-bank-boc {
+    background-position: 0 -160px;
+}
+/*交通*/
+.icon-bank-bocom,.icon-bank-bcom {
+    background-position: 0 -200px;
+}
+/*渤海*/
+.icon-bank-bohc,.icon-bank-cbhb {
+    background-position: 0 -240px;
+}
+/*上海*/
+.icon-bank-bos,.icon-bank-shb {
+    background-position: 0 -280px;
+}
+/*建设*/
+.icon-bank-ccb {
+    background-position: 0 -320px;
+}
+/*光大*/
+.icon-bank-ceb {
+    background-position: 0 -360px;
+}
+/*广发*/
+.icon-bank-gdb {
+    background-position: 0 -400px;
+}
+/*兴业*/
+.icon-bank-cib {
+    background-position: 0 -440px;
+}
+/*招商*/
+.icon-bank-cmb {
+    background-position: 0 -480px;
+}
+/*民生*/
+.icon-bank-cmbc {
+    background-position: 0 0;
+}
+/*中信*/
+.icon-bank-cncb,.icon-bank-citic {
+    background-position: 0 -560px;
+}
+/*恒丰*/
+.icon-bank-egbank {
+    background-position: 0 -600px;
+}
+/*广州*/
+.icon-bank-gzcb {
+    background-position: 0 -640px;
+}
+/*杭州*/
+.icon-bank-hccb,.icon-bank-hzb {
+    background-position: 0 -680px;
+}
+/*华夏*/
+.icon-bank-hxb {
+    background-position: 0 -720px;
+}
+/*工商*/
+.icon-bank-icbc {
+    background-position: 0 -760px;
+}
+/*宁波*/
+.icon-bank-nbbc,.icon-bank-nbcb {
+    background-position: 0 -800px;
+}
+/*南京*/
+.icon-bank-njbc,.icon-bank-njcb {
+    background-position: 0 -840px;
+}
+/*平安*/
+.icon-bank-pab {
+    background-position: 0 -880px;
+}
+/*邮政*/
+.icon-bank-psbc {
+    background-position: 0 -920px;
+}
+/*渣打*/
+.icon-bank-scb {
+    background-position: 0 -960px;
+}
+/*浦发*/
+.icon-bank-spdb {
+    background-position: 0 -1000px;
+}
+
+@media only screen and (max-width: 768px) {
+  .banklist{
+    padding: 15px 30px;
+  }
+  .banklist li {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.btn-buy{
+  margin:0 auto;
+  width: 300px;
+}
+.btn-buy:hover{
+  text-decoration: none;
+  background: rgba(228, 57, 60, 0.9);
+}

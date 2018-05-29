@@ -1,0 +1,45 @@
+{include file="header.html"}
+	<div class="main-content">
+		<div class="breadcrumbs">
+			权限修改
+		</div>
+		<div class="page-content">
+			<div class="linkmodify">
+				<form action="admin_action.php?op=save&t=update" method="post">
+				<div class="linkbox">
+					<input type="hidden" name="id"  value="{$info.id}" />
+					<div>
+						<span class="tit">父节点：</span>
+						<select name="fid" class="select-long">
+							{section name=show loop=$result}
+							<option value="{$result[show].id}" {if $result[show].id == $info.fid}selected{/if}>{$result[show].title}</option>
+							{/section}
+						</select>
+					</div>
+					<div>
+						<span class="tit">权限标题：</span>
+						<input type="text" name="title" placeholder="输入内容" value="{$info.title}" required="required" />
+					</div>
+					<div>
+						<span class="tit">权限URL：</span>
+						<input type="text" name="url" placeholder="输入内容" value="{$info.url}" />
+					</div>
+					<div>
+						<span class="tit">排序权重(越大越靠前)：</span>
+						<select name="index" class="select-long">
+							{section name=show loop=$results}
+							<option value="{$results[show]}" {if $results[show] == $info.index}selected{/if}>{$results[show]}</option>
+							{/section}
+						</select>
+					</div>
+					<div>
+						<button type="submit" class="btn" id="submit" style="margin-left: 30%">提交</button>
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

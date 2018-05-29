@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{$server_name.name}</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/headFoot.css">
+	<link rel="stylesheet" href="css/orderList.css">
+</head>
+<body>
+{include file="header.html"}
+	<div class="mobile-header">
+		<span class="goback"></span>
+		订单管理
+		<span class="gohome"></span>
+	</div>
+	<div class="orderList">
+		<div class="wrap">
+			<div class="titTab">
+				<span class="tab active">所有订单</span>
+			</div>
+			{if $result.nums != 0}
+			<ul class="lists">
+				<li class="listDetail head">
+					<span class="orderImg"></span>
+					<span class="orderName">商品</span>
+					<span class="orderUnitPrice">单价</span> 
+					<span class="orderGoodsNum">数量</span> 
+					<span class="orderPrice">合计金额（人民币）</span>
+					<span class="orderStatus">交易状态</span>
+					<span class="orderOperate">操作</span>
+				</li>
+				{section name=show loop=$result.result}
+				<li class="listDetail body cl" data-price="{$result.result[show].price_show}" data-orderid="{$result.result[show].order_id}" data-code="{$result.result[show].order_code}">
+					<span class="orderId">
+						<span class="orderTime">{$result.result[show].addtime_show}</span>
+						订单号：<span class="orderNum">{$result.result[show].order_id}</span>
+					</span>
+					<span class="orderId">
+						<lable style='color:red'>兑换码</lable>：<span class="orderNum codepwd" style="color: red;">********</span><i class="icon-see seecode" val='{$result.result[show].order_code}'></i>
+					</span>
+					<span class="orderImg eyeimg">
+						<img src="{$result.result[show].images_show}" alt="{$result.result[show].goods}" title="{$result.result[show].goods}">
+					</span>
+					<span class="orderName">{$result.result[show].goods}</span>
+					<span class="orderUnitPrice">$1.00</span>
+					<span class="orderGoodsNum">{$result.result[show].count} 个</span>
+					<span class="orderPrice">{$result.result[show].total_show}（约{$result.result[show].price_show}）</span>
+					<span class="orderCode">{$result.result[show].order_status_show}</span>
+					<span class="orderOperate">
+						{$result.result[show].button}
+					</span>
+				</li>
+				{/section}
+			</ul>
+			<div class="pager">
+				{$result.page_info}
+			</div>
+			{else}
+			<div style="line-height:50px;text-align:center;font-size:16px;">
+				暂无订单
+			</div>
+			{/if}
+		</div>
+	</div>
+ {include file="footer.html"}
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/public.js"></script>
+<script>
+  {literal}
+
+	function send_sms_code(order_id)
+	{
+		$.ajax({
+			type: "post",
+			url: "ucenter.php",
+			data: { "op": "send_sms_code", "order_id": order_id },
+			dataType: "json",
+			success: function (data) {
+				alert(data.Message);
+			}
+		});
+	}
+	$(function(){
+		// 发送验证码
+		$('.seecode').on('click',function(){
+			if($(this).hasClass('no')){
+				$(this).removeClass('no').prev('.codepwd').text('********');
+			}else{
+				$(this).addClass('no').prev('.codepwd').text($(this).attr('val'));
+			}
+		});
+		// 兑换
+		$(".show-recharge").on('click',function(){
+			var parents = $(this).parents('.listDetail');
+			var data = {
+				price:parents.data('price'),
+				order_id:parents.data('orderid'),
+				pwd:parents.data('code'),
+				account:0,
+				name:'',
+				code:''
+			};
+			var self = this;
+			$.modal({
+				text: '<div class="re-t"><div class="re-l"><label>订单号</label></div><div class="re-c">'+data.order_id+'</div></div><div class="re-t"><div class="re-l"><label>兑换码</label></div><div class="re-c"><span>********</span><i class="icon-see"></i></div></div><div class="re-t"><div class="re-l"><label>充值金额</label></div><div class="re-c"><span class="red">'+data.price+'</span></div></div><div class="re-t"><div class="re-l"><label>交易账号</label></div><div class="re-c"><input type="tel" name="account" placeholder="请输入交易账号"/></div></div><div class="re-t"><div class="re-l"><label>姓名</label></div><div class="re-c"><input type="tel" name="name" placeholder="请输入姓名"/></div></div><div class="re-t"><div class="re-l"><label>验证码</label></div><div class="re-c"><input type="tel" name="code" class="code" maxlength="6" placeholder="请输入短信验证码"/><a href="javascript:" class="sendcode">发送验证码</a></div></div>',
+				title: '<b>兑换充值</b>',
+				cssClass:'modal-recharge',
+				close:true,
+				buttons: [
+					{ 
+						close:false,
+						text: '兑换',
+						onClick: function(modal){
+							 var flag = true;
+							 var _this = $(this);
+							 modal.find("input").each(function(){
+							 	 if($(this).triggerHandler('blur') == false){
+							 	 		flag = false;
+							 	 		return false;
+							 	 }
+							 });
+							 if(flag == false) return false;
+							 $.ajax({
+								 	type:'post',
+									url: "ucenter.php?op=change_status",
+									data: data,
+									beforeSend:function(){
+										$.showIndicator();
+									},
+									complete: function () {
+				            $.hideIndicator();
+				          },
+									dataType:'json',
+									success: function (data) {
+										 if(data.IsSuccess){
+										 	  $.toast('兑换成功');
+										 	  setTimeout(function(){
+										 	  	window.location.reload();
+										 	  },2000);
+										 }else{
+										 	 $.toast(data.Message);
+										 }
+									}
+							 });
+						},
+						cssClass: 'modal-button-primary' 
+					}
+				]
+			});
+			// 初始化表单
+			var modal = $(".modal-recharge");
+			modal.find("input").each(function(i,d){
+				$(this).on('blur',function(){
+					var value = $.trim(this.value);
+					data[this.name] = value;
+					if(value == ''){
+						$.toast($(this).attr('placeholder'));
+						return false;
+					}
+					switch(this.name){
+						case 'account':
+							var reg = /^[0-9]*$/;
+							if (!reg.test(value)) {
+                  $.toast('交易账号格式不正确');
+                  return false;
+              }
+							break;
+						case 'name':
+							var reg = /^([A-Za-z\u4E00-\u9FA5]{1,30}((?:\.|\·+)[A-Za-z\u4E00-\u9FA5]{1,30})*|[a-zA-Z]{1,30}((?:\.|\s+)[a-zA-Z]{1,30})*)$/; 
+							if (!reg.test(value)) {
+                  $.toast('姓名只能为英文及中文字符');
+                  return false;
+              }
+              break;
+					}
+					data[this.name] = value;
+				});
+			});
+
+			// 查看兑换码
+			modal.find(".icon-see").on('click',function(){
+				if($(this).hasClass('no')){
+					$(this).removeClass('no').prev('span').text('********');
+				}else{
+					$(this).addClass('no').prev('span').text(data.pwd);
+				}
+			});
+
+			// 发送验证码
+			modal.find(".sendcode").on('click',function(){
+				 if($(this).hasClass('disabled')) return;
+				 var flag = true;
+				 var _this = $(this);
+				 modal.find("input").each(function(){
+				 	 if(this.name == 'account' || this.name == 'name'){
+				 	 		if($(this).triggerHandler('blur') == false){
+						 	 		flag = false;
+						 	 		return false;
+						 	}
+				 	 }
+				 });
+				 if(flag == false) return false;
+				 $.ajax({
+					 	type:'post',
+						url: "ucenter.php?op=check_acc",
+						data: data,
+						beforeSend:function(){
+							$.showIndicator();
+						},
+						complete: function () {
+	            $.hideIndicator();
+	          },
+						dataType:'json',
+						success: function (data) {
+							 if(data.IsSuccess){
+							 	  $.toast('短信验证码发送成功');
+							 		_this.countdown({
+		                  text: '{0}秒',
+		                  succ: function () {
+		                      _this.text('发送验证码');
+		                  }
+		              });
+							 }else{
+							 	 $.toast(data.Message);
+							 }
+						}
+				 });
+			});
+
+		});
+		
+		$(".show-recharge").each(function(){
+			$(this).parents(".orderOperate").addClass('mix-orderOperate');
+		});
+
+	});
+	
+	{/literal}
+
+	</script>
+		}
+</html>

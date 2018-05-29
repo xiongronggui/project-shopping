@@ -1,0 +1,591 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+  font-size: 14px;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "微软雅黑";
+  background: #f3f3f3;
+}
+img {
+  vertical-align: middle;
+  border: none;
+}
+a {
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+  color: #347ab8;
+}
+a:active{
+  color: #7a8fa6;
+}
+button,
+input,
+img {
+  outline: none;
+}
+ul,
+li {
+  list-style: none;
+}
+.fix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.fix {
+  *zoom: 1;  
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.btn,
+.yellow-btn,
+.black-btn {
+  width: 124px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  background: #347ab8;
+  border-radius:4px;
+}
+.yellow-btn {
+  background: #dba71c;
+  margin-left: 10px;
+  width: 8%;
+}
+.black-btn {
+  background: #2e363f;
+}
+.new-btn{
+  position: absolute;
+  left: 200px;
+  top: 6px;
+  z-index: 1;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 4px;
+  width: 110px;
+}
+.new-btn2{
+  position: absolute;
+  left: 350px;
+  top: 6px;
+  z-index: 1;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 4px;
+  width: 110px;
+}
+
+input[type=text],
+input[type=password],
+input[type=file] {
+  width: 51%;
+  height: 18px;
+  padding: 10px;
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+}
+input[type=file] {
+  height: 40px;
+  padding: 0;
+}
+textarea {
+  width: 51%;
+  padding: 0 10px;
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+  resize: none;
+}
+.select-long{
+  border-radius: 4px;
+  line-height: 40px;
+  height: 40px;
+  border: 1px solid #d5d5d5;
+  outline: none;
+  display: inline-block;
+}
+.tablebox {
+  margin: 10px 0 0;
+}
+table {
+  width: 100%;
+  text-align: center;
+  color: #4b4b4b;
+  border-left: 1px solid #dfdfdf;
+  border-bottom: 1px solid #dfdfdf;
+}
+table thead tr {
+  color: #707070;
+  font-weight: normal;
+  background: #f2f2f2;
+  background-image: -webkit-gradient(linear,left 0,left 100%,from(#f8f8f8),to(#ececec));
+  background-image: -webkit-linear-gradient(top,#f8f8f8,0%,#ececec,100%);
+  background-image: -moz-linear-gradient(top,#f8f8f8 0,#ececec 100%);
+  background-image: linear-gradient(to bottom,#f8f8f8 0,#ececec 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff8f8f8',endColorstr='#ffececec',GradientType=0);
+}
+table tr {
+  background: #fff;
+}
+table tr th {
+  background: url("../img/xian.jpg") repeat-x;
+  height: 16px;
+  line-height: 16px;
+  border-top: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+}
+table tr td {
+  height: 20px;
+  line-height: 20px;
+  border-top: 1px solid #dfdfdf;
+  border-right: 1px solid #dfdfdf;
+}
+table tbody tr:nth-of-type(odd) {
+  background: #eff3f8;
+}
+.icon,
+.icon-search {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 0 6px 6px 0;
+  border-left: 1px solid #d5d5d5;
+  background: #f8f8f8 url("../img/select_ico.png") no-repeat center;
+}
+.icon-search {
+  background: #f8f8f8 url("../img/icon_search.png") no-repeat center;
+}
+.icon-pen,
+.icon-password,
+.icon-delete,
+.icon-show,
+.icon-static {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  background: #f8f8f8 url("../img/pen_icon.png") no-repeat center;
+}
+.icon-password {
+  background: #f8f8f8 url("../img/password_icon.png") no-repeat center;
+}
+.icon-delete {
+  background: #f8f8f8 url("../img/delete_icon.png") no-repeat center;
+}
+.icon-show {
+  background: #f8f8f8 url("../img/show_icon.png") no-repeat center;
+}
+.icon-static{
+  background: #f8f8f8 url("../img/static_icon.png") no-repeat center;
+}
+
+.pic1 {
+  position: absolute;
+  width: 128px;
+  height: 128px;
+  bottom: -142px;
+  left: 180px;
+  padding: 2px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.pic2 {
+  position: absolute;
+  width:512px;
+  height: 128px;
+  bottom: -142px;
+  left: 180px;
+  padding: 2px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+.upload1 {
+  width: 51.5%;
+  cursor: pointer;
+  background: transparent;
+  position: absolute;
+  left: 180px;
+  opacity: 0;
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  height: 40px;
+  top: 0;
+}
+/*****登录*/
+.login_box {
+  background: url("../img/login_bg.jpg");
+}
+.login_box .login {
+  width: 1060px;
+  height: 660px;
+  position: absolute;
+  left: 50%;
+  margin-left: -530px;
+  top: 36%;
+  margin-top: -330px;
+  background: url("../img/earth_bg.png") no-repeat center;
+}
+.login_box .login > div {
+  width: 644px;
+  height: 400px;
+  margin: 260px auto 0;
+  background: #ffffff url("../img/login_tit.png") no-repeat center 80px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+.login_box .login > div > span {
+  position: absolute;
+  top: -4px;
+  left: 50%;
+  margin-left: -250px;
+  display: block;
+  width: 500px;
+  height: 4px;
+  border-radius: 6px 6px 0 0;
+  background: #d6a41f;
+}
+.login_box .login > div > span > a {
+  position: absolute;
+  top: -40px;
+  left: 8px;
+}
+.input_msg {
+  position: absolute;
+  bottom: 0;
+  width: 320px;
+  height: 170px;
+  left: 50%;
+  margin-left: -160px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+.input_msg input {
+  width: 82%;
+  padding-left: 44px;
+  margin-bottom: 26px;
+}
+.input_msg input:first-child {
+  background: url("../img/ico_User.png") no-repeat 14px center;
+}
+.input_msg input:nth-of-type(2) {
+  background: url("../img/ico_Lock.png") no-repeat 14px center;
+}
+/*****404*/
+.error {
+  width: 800px;
+  height: 800px;
+  position: absolute;
+  left: 50%;
+  margin-left: -400px;
+  background: url("../img/404_bg.png") no-repeat center;
+}
+.error p {
+  position: absolute;
+  bottom: 100px;
+  left: 90px;
+  font-size: 18px;
+}
+.error p a {
+  color: red;
+  font-size: 18px;
+  text-decoration: underline;
+}
+/*****首页框架部分*/
+.navbar {
+  min-height: 64px;
+  position: relative;
+  background: #14191f;
+  line-height: 64px;
+}
+.navbar .logo {
+  margin-left: 40px;
+}
+.navbar .right-btn {
+  margin-right: 30px;
+}
+.navbar .right-btn button {
+  width: 124px;
+  height: 40px;
+  line-height: 40px;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius:4px;
+}
+
+.navbar .right-btn button.green {
+  background: #009900;
+}
+.navbar .right-btn button.yellow {
+  background: #ff9900;
+}
+.navbar .right-btn button.blue {
+  background: #347ab8;
+}
+.navbar .right-btn button.red {
+  background: #d9544f;
+}
+.main-container {
+  position: static;
+}
+.sidebar-box {
+  background: #2e363f;
+}
+.sidebar {
+  width: 238px;
+  position: relative;
+}
+.account-msg {
+  margin: 30px 0 0 0;
+}
+.account-msg img {
+  float: left;
+  margin: 0 20px 0 28px;
+}
+.account-msg .msg {
+  text-align: center;
+  color: #fff;
+  height: 66px;
+  padding-top: 10px;
+}
+.account-msg .msg span {
+  color: #7a8fa6;
+  font-size: 14px;
+}
+.account-msg .times {
+  text-align: center;
+  color: #d19a0a;
+  font-size: 14px;
+  line-height: 24px;
+  margin-top: 20px;
+  padding-bottom: 14px;
+  background: url("../img/time_bg.png") no-repeat center 24px;
+  border-bottom: 1px solid #1a2026;
+}
+.nav-list {
+  background: #2e363f;
+}
+.nav-list a {
+  display: block;
+}
+.nav-list li .dropdown-toggle {
+  line-height: 42px;
+  padding: 0 10px 0 62px;
+  border-top: 1px solid #3f4a57;
+  border-bottom: 1px solid #1a2026;
+  background: url("../img/zhumulu_ico.png") no-repeat 44px center;
+  color: #91a2b5;
+  position: relative;
+}
+.nav-list li .dropdown-toggle .arrow {
+  display: inline-block;
+  width: 14px!important;
+  height: 14px;
+  line-height: 14px;
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  background: url("../img/zhankai_ico.png") no-repeat center;
+}
+.submenu{
+ display:block;
+}
+.submenu li a {
+  line-height: 42px;
+  padding: 0 10px 0 80px;
+  border-top: 1px solid #3f4a57;
+  border-bottom: 1px solid #1a2026;
+  background: url("../img/cimulu_ico_moren.png") no-repeat 70px center;
+  color: #91a2b5;
+  position: relative;
+}
+.submenu li a.active {
+  color: #fff;
+  background: #d6a41f url("../img/cimulu_ico_dianji.jpg") no-repeat 70px center;
+}
+.submenu li a.active:after {
+  display: block;
+  content: "";
+  position: absolute!important;
+  right: 0;
+  top: 7px;
+  border: 8px solid transparent;
+  border-width: 14px 10px;
+  border-right-color: #f3f3f3;
+}
+.main-content {
+  margin-left: 238px;
+  min-height: 100%;
+  background: #f3f3f3;
+}
+.breadcrumbs {
+  line-height: 54px;
+  color: #a0b9d5;
+  text-indent: 70px;
+  background: #1f262d url("../img/menu_ico.png") no-repeat 30px center;
+}
+.page-content {
+  padding: 16px 30px 0 30px;
+}
+.retrieval {
+  position: relative;
+}
+.select {
+  display: inline-block;
+}
+.select > p {
+  position: relative;
+  display: inline-block;
+  line-height: 38px;
+  border: 1px solid #d5d5d5;
+  color: #c2c2c2;
+  text-indent: 10px;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  text-align: left;
+}
+.select > p input {
+  color: #c2c2c2;
+  font-size: 16px;
+  line-height: 34px;
+  border: none;
+}
+.select .type-ul {
+  position: absolute;
+  background: #fff;
+  display: none;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  z-index: 1;
+}
+.select .type-ul li {
+  width: 100%;
+  line-height: 34px;
+  text-indent: 10px;
+  cursor: pointer;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+.select .type-ul li:hover {
+  background: #d6a41f;
+  color: #fff;
+}
+.linkmodify {
+  border: 1px solid #d5d5d5;
+  background: #f9f9f9 url("../img/xian.jpg") repeat-x top;
+}
+.linkbox {
+  margin: 80px 0;
+}
+.linkbox > div {
+  margin-bottom: 30px;
+  position: relative;
+  align-items: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+.linkbox > div .tit {
+  display: inline-block;
+  width: 180px;
+  text-align: right;
+  height: 40px;
+  float: left;
+  line-height: 40px;
+}
+.linkbox > div .tips {
+  display: inline-block;
+  position: absolute;
+  bottom: -22px;
+  left: 180px;
+}
+
+.linkbox > div .process {
+    display: block;
+    position: absolute;
+    left: 180px;
+}
+
+.select_check{
+  text-align: left;padding: 10px;display: inline-block;
+}
+.checkBox{
+  margin-bottom: 20px;
+  position: relative;
+}
+.checkBox > span{
+  margin-bottom: 8px;
+  width: 100px;
+  display: inline-block;
+  border-right:1px solid #aaa;
+  position: absolute;
+}
+.checkBox > div {
+  padding-left:20px;
+  width: 80%;
+  display: inline-block;
+  position: relative;
+  left: 100px;
+}
+.checkBox > div > label {
+  width: 120px;
+  margin-bottom: 6px;
+  display: inline-block;
+}
+.Validform_checktip{
+  margin-left:8px;
+  line-height:20px;
+  height:20px;
+  overflow:hidden;
+  color:#999;
+  font-size:12px;
+}
+.Validform_right{
+  color:#71b83d;
+  padding-left:20px;
+  background:url(../img/right.png) no-repeat left center;
+}
+.Validform_wrong{
+  color:red;
+  padding-left:20px;
+  white-space:nowrap;
+  background:url(../img/error.png) no-repeat left center;
+}
+.Validform_loading{
+  padding-left:20px;
+  background:url(../img/onLoad.gif) no-repeat left center;
+}
+.Validform_error{
+  background-color:#ffe7e7;
+}
+#Validform_msg{color:#7d8289; font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif; width:280px; -webkit-box-shadow:2px 2px 3px #aaa; -moz-box-shadow:2px 2px 3px #aaa; background:#fff; position:absolute; top:0px; right:50px; z-index:99999; display:none;filter: progid:DXImageTransform.Microsoft.Shadow(Strength=3, Direction=135, Color='#999999');}
+#Validform_msg .iframe{position:absolute; left:0px; top:-1px; z-index:-1;}
+#Validform_msg .Validform_title{line-height:25px; height:25px; text-align:left; font-weight:bold; padding:0 8px; color:#fff; position:relative; background-color:#000;}
+#Validform_msg a.Validform_close:link,#Validform_msg a.Validform_close:visited{line-height:22px; position:absolute; right:8px; top:0px; color:#fff; text-decoration:none;}
+#Validform_msg a.Validform_close:hover{color:#cc0;}
+#Validform_msg .Validform_info{padding:8px;border:1px solid #000; border-top:none; text-align:left;}

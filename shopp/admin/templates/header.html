@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>后台管理系统</title>
+	<link rel="stylesheet" href="css/global.css">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/index.js"></script>
+	<script charset="utf-8" src="../kindeditor/kindeditor-min.js"></script>
+	<script charset="utf-8" src="../kindeditor/lang/zh_CN.js"></script>
+</head>
+<body>
+<div class="navbar fix">
+	<div class="logo fl">
+		<a href="javascript:void(0);">
+			<img src="img/logo.png" alt="">
+		</a>
+	</div>
+	<div class="right-btn fr">
+		<button class="green" onclick="window.location.href='admin_password.php'">修改密码</button>
+		<button class="red" onclick="window.location.href='index.php?op=logout'">退出登录</button>
+	</div>
+</div>
+<div class="main-container fix">
+	<div class="sidebar-box fl">
+		<div class="sidebar">
+			<div class="account-msg fix">
+				<div class="msg">
+					<p style="margin-bottom: 20px">{$smarty.session.admin.info.username}</p>
+					<p><span>身份：</span>{$smarty.session.admin.info.group}</p>
+				</div>
+				<p class="times" id="time"></p>
+			</div>
+			<ul class="nav-list">
+				{section name=show loop=$smarty.session.admin.action}
+				<li>
+					<a href="javascript:void(0);" class="dropdown-toggle">
+						<span class="menu-text">{$smarty.session.admin.action[show].title}</span>
+						<b class="arrow"></b>
+					</a>
+					<ul class="submenu">
+						{section name=show_son loop=$smarty.session.admin.action[show].son}
+						{if $smarty.session.admin.action[show].son[show_son].checked == "checked"}
+						<li>
+							<a href="{$smarty.session.admin.action[show].son[show_son].url}" {if $smarty.session.admin.action[show].son[show_son].url == $smarty.session.admin.now_page}class="active"{/if}>
+								{$smarty.session.admin.action[show].son[show_son].title}
+							</a>
+						</li>
+						{/if}
+						{/section}
+					</ul>
+				</li>
+				{/section}
+			</ul>
+		</div>
+	</div>
+	<script>
+		var left=$(".submenu");
+		for(var i=0;i<left.length;i++){
+			for(var j=0;j<left.eq(i).find("li").length;j++){
+				if(left.eq(i).find("li").eq(j).find("a").hasClass("active")){
+					left.eq(i).css("display","block");
+				}
+			}
+		}
+		$(".nav-list .dropdown-toggle").click(function(){
+			if($(this).next().css("display")=="block"){			
+				$(this).next().slideUp();
+			}else{
+				$(this).next().slideDown();
+			}
+		});
+	</script>

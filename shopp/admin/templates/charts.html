@@ -1,0 +1,77 @@
+{include file="header.html"}
+	<script src="js/echarts.min.js"></script>
+	<script src="css/echarts_css_macarons.js"></script>
+	<script src="js/charts.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css"/>
+	<script src="js/jquery.datetimepicker.js"></script>
+	<script src="js/datetimepicker.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function () {
+			channelCountPie();
+			channelTotalPie();
+			sourcePie();
+			rechargePlatformPie();
+			channelLastWeekCountArea();
+			channelLastWeekTotalArea();
+			sourceLastWeekArea();
+			rechargePlatformLastWeekArea();
+		});
+	</script>
+	<style>
+		.chart{
+			float:left;
+			width:50%!important;
+		}	
+	</style>
+	<div class="main-content">
+		<div class="breadcrumbs">
+			数据统计
+		</div>
+		<div class="page-content fix">
+			<div class="retrieval">
+				<div id="news_filter" class="dataTables_filter">
+					<span class="spaninline">
+						<span class="tit">查询日期：</span>
+						<span class="label">
+							<input type="text" id="time_start" readonly placeholder="选择日期" value="{$time_start}" style="width:10%;"/> - 
+							<input type="text" id="time_end" readonly placeholder="选择日期" value="{$time_end}" style="width:10%;"/>
+							<input type="button" id="search" class="btn" value="搜索" />
+							<input type="button" id="reset" class="btn" value="重置" />
+						</span>
+					</span>
+				</div>
+			</div>
+			<div id="channel_count_pie" class="chart" style="width:100%; height:450px;margin-top:40px;"></div>
+			<div id="channel_total_pie" class="chart" style="width:100%; height:450px;margin-top: 40px;"></div>
+			<div id="source_pie" class="chart" style="width:100%; height:450px;"></div>
+			<div id="recharge_platform_pie" class="chart" style="width:100%; height:450px;"></div>
+			<div id="channel_last_week_count_area" style="float:left; width:100%; height:450px"></div>
+			<div id="channel_last_week_total_area" style="float:left; width:100%; height:450px;"></div>
+			<div id="source_last_week_area" style="float:left; width:100%; height:450px"></div>
+			<div id="recharge_platform_last_week_area" style="float:left; width:100%; height:450px;"></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
+<script>
+	$(document).ready(function() 
+	{
+		//搜索
+		$("#search").click(function() 
+		{
+			var time_start = $("#time_start").val() ? "&time_start=" + $("#time_start").val() : "";
+			var time_end = $("#time_end").val() ? "&time_end=" + $("#time_end").val() : "";
+
+			var url = "charts.php?page=1";
+			var para = time_start + time_end;
+			window.location.href = url + para;
+		});
+
+		$("#reset").click(function() 
+		{
+			var url = "charts.php?page=1";
+			window.location.href = url;
+		});
+	});
+</script>

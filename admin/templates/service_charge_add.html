@@ -1,0 +1,41 @@
+{include file="header.html"}
+	<div class="main-content">
+		<div class="breadcrumbs">
+			手续费管理
+		</div>
+		<div class="page-content">
+			<div class="linkmodify">
+				<form action="service_charge_list.php?op=save" method="post">
+				<div class="linkbox">
+					<div>
+						<input type="hidden" name="charge_id" value="{$id}">
+						<span class="tit">通道名称：</span>
+						<input type="text" name="charge_name" placeholder="输入通道名称" required="required" value="{$name}" />
+					</div>
+					<div>
+						<span class="tit">代码：</span>
+						<input type="text" name="code_val" placeholder="输入手续费" required="required" value="{$code}" />
+					</div>
+					<div>
+						<span class="tit">手续费：</span>
+						<input type="text" name="charge_val" placeholder="输入手续费" required="required" value="{$rate}" />
+					</div>
+					<div>
+						<span class="tit">计算方式：</span>
+						<select name="charge_type" class="select-long" style="width: 769px;">
+							<option value="1">四舍五入</option>
+							<option value="2">向下取整</option>
+							<option value="3">向上取整</option>
+						</select>
+					</div>
+					<div>
+						<button type="submit" class="btn" id="submit" style="margin-left: 30%">提交</button>
+					</div>
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>

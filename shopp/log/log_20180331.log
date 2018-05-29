@@ -1,0 +1,508 @@
+-------------------
+2018-03-31 08:57:33
+回调加密字符串:amount=6,258.72&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331085732673&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 08:57:33
+发送加密值:478018a7ae289d1befae2606186d6157
+-------------------
+-------------------
+2018-03-31 09:04:17
+回调加密字符串:amount=938.81&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331090416195&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 09:04:17
+发送加密值:aaa48812c3247b678d7447f173bd33c6
+-------------------
+-------------------
+2018-03-31 09:04:52
+qilinbailin->"amount=938.81&channelOrderno=2018033100111170600C&merchno=333610189990001&orderno=03180331100000003615&signature=746503005047D4D1CED6E09444088684&status=2&traceno=801180331090416195"
+-------------------
+-------------------
+2018-03-31 09:04:52
+内部参数获取"amount=938.81&channelOrderno=2018033100111170600C&merchno=333610189990001&orderno=03180331100000003615&signature=746503005047D4D1CED6E09444088684&status=2&traceno=801180331090416195"
+-------------------
+-------------------
+2018-03-31 09:04:52
+回调加密字符串:amount=938.81&channelOrderno=2018033100111170600C&merchno=333610189990001&orderno=03180331100000003615&status=2&traceno=801180331090416195&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 09:04:52
+加密结果:746503005047D4D1CED6E09444088684
+-------------------
+-------------------
+2018-03-31 09:04:52
+qilinbailin->订单号:801180331090416195
+-------------------
+-------------------
+2018-03-31 09:05:54
+{"op":"check_order_id","order_id":"801180331090416195","password":"48369596"}
+-------------------
+-------------------
+2018-03-31 09:05:54
+checkOrderId:{"IsSuccess":true,"Message":{"price":"$ 150.00","mobile":"13695165594"}}
+-------------------
+-------------------
+2018-03-31 09:05:56
+{"op":"sendsms_by_order_id","order_id":"801180331090416195","password":"48369596"}
+-------------------
+-------------------
+2018-03-31 09:05:56
+checkOrderId:{"IsSuccess":true,"Message":{"price":"$ 150.00","mobile":"13695165594"}}
+-------------------
+-------------------
+2018-03-31 09:05:56
+sendSMSByOrderId:{"IsSuccess":true,"Message":"\u53d1\u9001\u6210\u529f"}
+-------------------
+-------------------
+2018-03-31 09:06:08
+{"op":"recharge_order_id","order_id":"801180331090416195","password":"48369596","code":"945709"}
+-------------------
+-------------------
+2018-03-31 09:06:08
+rechargeOrderId:{"IsSuccess":true,"Message":{"id":"4347","order_id":"801180331090416195","goods":"\u82f9\u679c\u91d1","images":"201803231058299304.jpg","price":"150.00","use_rate":"6.2587","total":"938.81","uid":"785","addtime":"1522458256","paytime":"1522458292","channel":"7080","source":"\u56fd\u707f\u5b9e\u4e1a","order_status":"1","recharge_platform":null,"recharge_account":null,"recharge_total":"0.00","usetime":"0","del_status":"00000000000","mobile":"13695165594","people_id":"440682199212161712"}}
+-------------------
+-------------------
+2018-03-31 09:06:09
+{"op":"change_code_status","order_id":"801180331090416195","password":"48369596","code":"945709","recharge_platform":"鑫圣金业","recharge_account":8996889,"recharge_total":150.00}
+-------------------
+-------------------
+2018-03-31 09:06:09
+changeCodeStatus:{"id":"4347","order_id":"801180331090416195","goods":"\u82f9\u679c\u91d1","images":"201803231058299304.jpg","price":"15000","use_rate":"6.2587","total":"93881","uid":"785","addtime":"1522458256","paytime":"1522458292","pwd":"+nUDZyKswkY2OEWek1niT5mLSluwN8jr6onJsZ449iG55g","channel":"7080","source":"\u56fd\u707f\u5b9e\u4e1a","order_status":"1","recharge_platform":null,"recharge_account":null,"recharge_total":"0.00","usetime":"0","del_status":"00000000000","mobile":"13695165594"}
+-------------------
+-------------------
+2018-03-31 09:06:09
+changeCodeStatus:1
+-------------------
+-------------------
+2018-03-31 09:06:09
+changeCodeStatus:update goods_order set recharge_platform = '鑫圣金业',recharge_account='8996889',recharge_total='150', usetime = 1522458369 where order_id = '801180331090416195'
+-------------------
+-------------------
+2018-03-31 09:06:09
+changeCodeStatus:{"IsSuccess":true,"Message":""}
+-------------------
+-------------------
+2018-03-31 09:06:27
+回调加密字符串:amount=938.81&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331090626335&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 09:06:27
+发送加密值:9fb0ebc515b6fdce3e1a5a9ca3a61f07
+-------------------
+-------------------
+2018-03-31 09:06:55
+qilinbailin->"amount=938.81&channelOrderno=2018033100111445697C&merchno=333610189990001&orderno=03180331100000003616&signature=C3762F564BA1FC13E8BA2EDD2BC5FF5E&status=2&traceno=801180331090626335"
+-------------------
+-------------------
+2018-03-31 09:06:55
+内部参数获取"amount=938.81&channelOrderno=2018033100111445697C&merchno=333610189990001&orderno=03180331100000003616&signature=C3762F564BA1FC13E8BA2EDD2BC5FF5E&status=2&traceno=801180331090626335"
+-------------------
+-------------------
+2018-03-31 09:06:55
+回调加密字符串:amount=938.81&channelOrderno=2018033100111445697C&merchno=333610189990001&orderno=03180331100000003616&status=2&traceno=801180331090626335&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 09:06:55
+加密结果:C3762F564BA1FC13E8BA2EDD2BC5FF5E
+-------------------
+-------------------
+2018-03-31 09:06:55
+qilinbailin->订单号:801180331090626335
+-------------------
+-------------------
+2018-03-31 09:07:25
+{"op":"check_order_id","order_id":"801180331090626335","password":"97624146"}
+-------------------
+-------------------
+2018-03-31 09:07:25
+checkOrderId:{"IsSuccess":true,"Message":{"price":"$ 150.00","mobile":"13695165594"}}
+-------------------
+-------------------
+2018-03-31 09:07:27
+{"op":"sendsms_by_order_id","order_id":"801180331090626335","password":"97624146"}
+-------------------
+-------------------
+2018-03-31 09:07:27
+checkOrderId:{"IsSuccess":true,"Message":{"price":"$ 150.00","mobile":"13695165594"}}
+-------------------
+-------------------
+2018-03-31 09:07:27
+sendSMSByOrderId:{"IsSuccess":true,"Message":"\u53d1\u9001\u6210\u529f"}
+-------------------
+-------------------
+2018-03-31 09:07:39
+{"op":"recharge_order_id","order_id":"801180331090626335","password":"97624146","code":"102188"}
+-------------------
+-------------------
+2018-03-31 09:07:39
+rechargeOrderId:{"IsSuccess":true,"Message":{"id":"4348","order_id":"801180331090626335","goods":"\u82f9\u679c\u91d1","images":"201803231058299304.jpg","price":"150.00","use_rate":"6.2587","total":"938.81","uid":"785","addtime":"1522458386","paytime":"1522458415","channel":"7080","source":"\u56fd\u707f\u5b9e\u4e1a","order_status":"1","recharge_platform":null,"recharge_account":null,"recharge_total":"0.00","usetime":"0","del_status":"00000000000","mobile":"13695165594","people_id":"440682199212161712"}}
+-------------------
+-------------------
+2018-03-31 09:07:40
+{"op":"change_code_status","order_id":"801180331090626335","password":"97624146","code":"102188","recharge_platform":"鑫圣金业","recharge_account":8996889,"recharge_total":150.00}
+-------------------
+-------------------
+2018-03-31 09:07:40
+changeCodeStatus:{"id":"4348","order_id":"801180331090626335","goods":"\u82f9\u679c\u91d1","images":"201803231058299304.jpg","price":"15000","use_rate":"6.2587","total":"93881","uid":"785","addtime":"1522458386","paytime":"1522458415","pwd":"+nUDZyKswkY2OBGez1nkTcvcTQ7hYcjh7dzEvps8+yW05g","channel":"7080","source":"\u56fd\u707f\u5b9e\u4e1a","order_status":"1","recharge_platform":null,"recharge_account":null,"recharge_total":"0.00","usetime":"0","del_status":"00000000000","mobile":"13695165594"}
+-------------------
+-------------------
+2018-03-31 09:07:40
+changeCodeStatus:1
+-------------------
+-------------------
+2018-03-31 09:07:40
+changeCodeStatus:update goods_order set recharge_platform = '鑫圣金业',recharge_account='8996889',recharge_total='150', usetime = 1522458460 where order_id = '801180331090626335'
+-------------------
+-------------------
+2018-03-31 09:07:40
+changeCodeStatus:{"IsSuccess":true,"Message":""}
+-------------------
+-------------------
+2018-03-31 09:23:04
+回调加密字符串:amount=6,258.72&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331092303545&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 09:23:04
+发送加密值:434da82c873ea96c4e2a1a6951f4c74d
+-------------------
+-------------------
+2018-03-31 09:53:07
+回调加密字符串:amount=625.87&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331095306945&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 09:53:07
+发送加密值:d21543c06111a5220bda3d26d99bf6f4
+-------------------
+-------------------
+2018-03-31 09:53:38
+回调加密字符串:amount=6,258.72&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331095337796&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 09:53:38
+发送加密值:867825e6c660872fbcc8ccd4daacd653
+-------------------
+-------------------
+2018-03-31 09:53:57
+回调加密字符串:amount=3,129.36&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331095356673&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 09:53:57
+发送加密值:28ecd0d5b2b4ab6bd90bfc9476736fc7
+-------------------
+-------------------
+2018-03-31 09:54:12
+回调加密字符串:amount=1,877.62&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331095411963&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 09:54:12
+发送加密值:4e1539bc889220a7ab81afaa5fb70b34
+-------------------
+-------------------
+2018-03-31 09:54:37
+回调加密字符串:amount=1,251.74&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331095436917&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 09:54:37
+发送加密值:ee6ab88e7e125efa6004a3396982b3ea
+-------------------
+-------------------
+2018-03-31 09:55:12
+回调加密字符串:amount=625.87&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331095512171&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 09:55:12
+发送加密值:5e7f3100518e05a5f9969bfde0c9c239
+-------------------
+-------------------
+2018-03-31 10:03:32
+回调加密字符串:amount=6,258.72&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331100330946&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 10:03:32
+发送加密值:990032a2884488d91582b832e13266de
+-------------------
+-------------------
+2018-03-31 10:04:40
+回调加密字符串:amount=938.81&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331100440514&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 10:04:40
+发送加密值:7101b7c6e0ae3927ecb534c1c67aece7
+-------------------
+-------------------
+2018-03-31 10:06:19
+qilinbailin->"amount=938.81&channelOrderno=2018033100119209959C&merchno=333610189990001&orderno=03180331100000003634&signature=A3FB1DF6D03BCE600A755C83AB5294F1&status=2&traceno=801180331100440514"
+-------------------
+-------------------
+2018-03-31 10:06:19
+内部参数获取"amount=938.81&channelOrderno=2018033100119209959C&merchno=333610189990001&orderno=03180331100000003634&signature=A3FB1DF6D03BCE600A755C83AB5294F1&status=2&traceno=801180331100440514"
+-------------------
+-------------------
+2018-03-31 10:06:19
+回调加密字符串:amount=938.81&channelOrderno=2018033100119209959C&merchno=333610189990001&orderno=03180331100000003634&status=2&traceno=801180331100440514&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 10:06:19
+加密结果:A3FB1DF6D03BCE600A755C83AB5294F1
+-------------------
+-------------------
+2018-03-31 10:06:19
+qilinbailin->订单号:801180331100440514
+-------------------
+-------------------
+2018-03-31 10:11:42
+回调加密字符串:amount=6,258.72&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331101142370&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 10:11:42
+发送加密值:1950fe4ecf7619316a974971e900cb47
+-------------------
+-------------------
+2018-03-31 10:20:16
+{"op":"check_order_id","order_id":"801180331100440514","password":"76528743"}
+-------------------
+-------------------
+2018-03-31 10:20:16
+checkOrderId:{"IsSuccess":true,"Message":{"price":"$ 150.00","mobile":"18335601676"}}
+-------------------
+-------------------
+2018-03-31 10:20:20
+{"op":"sendsms_by_order_id","order_id":"801180331100440514","password":"76528743"}
+-------------------
+-------------------
+2018-03-31 10:20:20
+checkOrderId:{"IsSuccess":true,"Message":{"price":"$ 150.00","mobile":"18335601676"}}
+-------------------
+-------------------
+2018-03-31 10:20:20
+sendSMSByOrderId:{"IsSuccess":true,"Message":"\u53d1\u9001\u6210\u529f"}
+-------------------
+-------------------
+2018-03-31 10:20:36
+{"op":"recharge_order_id","order_id":"801180331100440514","password":"76528743","code":"435843"}
+-------------------
+-------------------
+2018-03-31 10:20:36
+rechargeOrderId:{"IsSuccess":true,"Message":{"id":"4358","order_id":"801180331100440514","goods":"\u82f9\u679c\u91d1","images":"201803231058299304.jpg","price":"150.00","use_rate":"6.2587","total":"938.81","uid":"801","addtime":"1522461880","paytime":"1522461979","channel":"7080","source":"\u56fd\u707f\u5b9e\u4e1a","order_status":"1","recharge_platform":null,"recharge_account":null,"recharge_total":"0.00","usetime":"0","del_status":"00000000000","mobile":"18335601676","people_id":"140581197506290016"}}
+-------------------
+-------------------
+2018-03-31 10:20:37
+{"op":"change_code_status","order_id":"801180331100440514","password":"76528743","code":"435843","recharge_platform":"鑫圣金业","recharge_account":8995982,"recharge_total":150.00}
+-------------------
+-------------------
+2018-03-31 10:20:37
+changeCodeStatus:{"id":"4358","order_id":"801180331100440514","goods":"\u82f9\u679c\u91d1","images":"201803231058299304.jpg","price":"15000","use_rate":"6.2587","total":"93881","uid":"801","addtime":"1522461880","paytime":"1522461979","pwd":"+nUDZyKswkY2OESUnFi+Tp7dSQu6NMTp64\/Kv5g89yO04w","channel":"7080","source":"\u56fd\u707f\u5b9e\u4e1a","order_status":"1","recharge_platform":null,"recharge_account":null,"recharge_total":"0.00","usetime":"0","del_status":"00000000000","mobile":"18335601676"}
+-------------------
+-------------------
+2018-03-31 10:20:37
+changeCodeStatus:1
+-------------------
+-------------------
+2018-03-31 10:20:37
+changeCodeStatus:update goods_order set recharge_platform = '鑫圣金业',recharge_account='8995982',recharge_total='150', usetime = 1522462837 where order_id = '801180331100440514'
+-------------------
+-------------------
+2018-03-31 10:20:37
+changeCodeStatus:{"IsSuccess":true,"Message":""}
+-------------------
+-------------------
+2018-03-31 10:57:31
+回调加密字符串:amount=18,776.16&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331105731325&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 10:57:31
+发送加密值:ddb9a541311384124d23b8b7f3ea8afd
+-------------------
+-------------------
+2018-03-31 11:01:10
+回调加密字符串:amount=6,258.72&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331110109855&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 11:01:10
+发送加密值:28fdab29a9be3b0c7cdfdeb57fe74b77
+-------------------
+-------------------
+2018-03-31 11:01:26
+回调加密字符串:amount=625.87&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331110126312&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 11:01:26
+发送加密值:07e370c457e7756766a47d9458ea73fa
+-------------------
+-------------------
+2018-03-31 12:16:34
+doudou->"merchant_no=1180316041250713&out_order_sn=1800005112018032708483870539&order_sn=801180327084810591&bank_code=&bank_card_type=0&ord_currency=CNY&pay_amount=1858806&pay_status=1&pay_time=1522111743&trade_state=SUCCESS&sign=dc1fb5fbbea7e99a8a8b2a2566c4dc37"
+-------------------
+-------------------
+2018-03-31 12:16:34
+doudou->订单号:801180327084810591
+-------------------
+-------------------
+2018-03-31 12:16:34
+doudou->订单号异常:801180327084810591
+-------------------
+-------------------
+2018-03-31 12:16:37
+doudou->"merchant_no=1180316041250713&out_order_sn=1800005112018032708434093012&order_sn=801180327084313378&bank_code=&bank_card_type=0&ord_currency=CNY&pay_amount=1239204&pay_status=1&pay_time=1522111525&trade_state=SUCCESS&sign=1d976a97a9c52e37b87f740e7fa479c8"
+-------------------
+-------------------
+2018-03-31 12:16:37
+doudou->订单号:801180327084313378
+-------------------
+-------------------
+2018-03-31 12:16:37
+doudou->订单号异常:801180327084313378
+-------------------
+-------------------
+2018-03-31 12:16:39
+doudou->"merchant_no=1180316041250713&out_order_sn=1800005112018032706374126217&order_sn=801180327063701741&bank_code=&bank_card_type=0&ord_currency=CNY&pay_amount=136312&pay_status=1&pay_time=1522103881&trade_state=SUCCESS&sign=7c4286ed2aa7d87099a4cb7efd372d2f"
+-------------------
+-------------------
+2018-03-31 12:16:39
+doudou->订单号:801180327063701741
+-------------------
+-------------------
+2018-03-31 12:16:39
+doudou->订单号异常:801180327063701741
+-------------------
+-------------------
+2018-03-31 12:44:46
+回调加密字符串:amount=938.81&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331124446484&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 12:44:46
+发送加密值:cf1294c3a5ae1e699aca9d771ba0c943
+-------------------
+-------------------
+2018-03-31 12:48:41
+qilinbailin->"amount=938.81&channelOrderno=2018033100143337900C&merchno=333610189990001&orderno=03180331100000003726&signature=B49DCD5703A1ACF77183E3A4AB44A0F6&status=2&traceno=801180331124446484"
+-------------------
+-------------------
+2018-03-31 12:48:41
+内部参数获取"amount=938.81&channelOrderno=2018033100143337900C&merchno=333610189990001&orderno=03180331100000003726&signature=B49DCD5703A1ACF77183E3A4AB44A0F6&status=2&traceno=801180331124446484"
+-------------------
+-------------------
+2018-03-31 12:48:41
+回调加密字符串:amount=938.81&channelOrderno=2018033100143337900C&merchno=333610189990001&orderno=03180331100000003726&status=2&traceno=801180331124446484&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 12:48:41
+加密结果:B49DCD5703A1ACF77183E3A4AB44A0F6
+-------------------
+-------------------
+2018-03-31 12:48:41
+qilinbailin->订单号:801180331124446484
+-------------------
+-------------------
+2018-03-31 12:52:07
+{"op":"check_order_id","order_id":"372018033100000000000434617914","password":"76812321"}
+-------------------
+-------------------
+2018-03-31 12:52:07
+checkOrderId:{"IsSuccess":false,"Message":"\u8ba2\u5355\u6216\u5bc6\u7801\u9519\u8bef"}
+-------------------
+-------------------
+2018-03-31 12:52:25
+{"op":"check_order_id","order_id":"801180331124446484","password":"76812321"}
+-------------------
+-------------------
+2018-03-31 12:52:25
+checkOrderId:{"IsSuccess":true,"Message":{"price":"$ 150.00","mobile":"17639200084"}}
+-------------------
+-------------------
+2018-03-31 12:52:53
+{"op":"sendsms_by_order_id","order_id":"801180331124446484","password":"76812321"}
+-------------------
+-------------------
+2018-03-31 12:52:53
+checkOrderId:{"IsSuccess":true,"Message":{"price":"$ 150.00","mobile":"17639200084"}}
+-------------------
+-------------------
+2018-03-31 12:52:53
+sendSMSByOrderId:{"IsSuccess":true,"Message":"\u53d1\u9001\u6210\u529f"}
+-------------------
+-------------------
+2018-03-31 12:53:03
+{"op":"recharge_order_id","order_id":"801180331124446484","password":"76812321","code":"752022"}
+-------------------
+-------------------
+2018-03-31 12:53:03
+rechargeOrderId:{"IsSuccess":true,"Message":{"id":"4363","order_id":"801180331124446484","goods":"\u82f9\u679c\u91d1","images":"201803231058299304.jpg","price":"150.00","use_rate":"6.2587","total":"938.81","uid":"804","addtime":"1522471486","paytime":"1522471721","channel":"7080","source":"\u56fd\u707f\u5b9e\u4e1a","order_status":"1","recharge_platform":null,"recharge_account":null,"recharge_total":"0.00","usetime":"0","del_status":"00000000000","mobile":"17639200084","people_id":"410522199903019355"}}
+-------------------
+-------------------
+2018-03-31 12:53:05
+{"op":"change_code_status","order_id":"801180331124446484","password":"76812321","code":"752022","recharge_platform":"鑫圣金业","recharge_account":8997712,"recharge_total":150.00}
+-------------------
+-------------------
+2018-03-31 12:53:05
+changeCodeStatus:{"id":"4363","order_id":"801180331124446484","goods":"\u82f9\u679c\u91d1","images":"201803231058299304.jpg","price":"15000","use_rate":"6.2587","total":"93881","uid":"804","addtime":"1522471486","paytime":"1522471721","pwd":"+nUDZyKswkY2OEXCzAq\/QcjXTwmxaJXo54\/Kv5U\/\/Sey4Q","channel":"7080","source":"\u56fd\u707f\u5b9e\u4e1a","order_status":"1","recharge_platform":null,"recharge_account":null,"recharge_total":"0.00","usetime":"0","del_status":"00000000000","mobile":"17639200084"}
+-------------------
+-------------------
+2018-03-31 12:53:05
+changeCodeStatus:1
+-------------------
+-------------------
+2018-03-31 12:53:05
+changeCodeStatus:update goods_order set recharge_platform = '鑫圣金业',recharge_account='8997712',recharge_total='150', usetime = 1522471985 where order_id = '801180331124446484'
+-------------------
+-------------------
+2018-03-31 12:53:05
+changeCodeStatus:{"IsSuccess":true,"Message":""}
+-------------------
+-------------------
+2018-03-31 16:17:32
+回调加密字符串:amount=6,258.72&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331161732847&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 16:17:32
+发送加密值:1a325dae64caba3d94b43e9a5ec487a8
+-------------------
+-------------------
+2018-03-31 18:29:04
+回调加密字符串:amount=1,063.98&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331182903805&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 18:29:04
+发送加密值:eec3840960add7f13d2565e53973e399
+-------------------
+-------------------
+2018-03-31 18:32:25
+回调加密字符串:amount=1,063.98&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331183225862&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 18:32:25
+发送加密值:b210f1e8f64ad8437dc6a8f0e2e568d0
+-------------------
+-------------------
+2018-03-31 18:42:08
+{"op":"check_order_id","order_id":"1581354977200000","password":"549772000"}
+-------------------
+-------------------
+2018-03-31 18:42:08
+checkOrderId:{"IsSuccess":false,"Message":"\u8ba2\u5355\u6216\u5bc6\u7801\u9519\u8bef"}
+-------------------
+-------------------
+2018-03-31 18:43:05
+回调加密字符串:amount=1,063.98&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331184304789&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 18:43:05
+发送加密值:1846c27c226e14b889ed4638d4177dfb
+-------------------
+-------------------
+2018-03-31 18:45:09
+回调加密字符串:amount=1,063.98&channel=1&merchno=333610189990001&notifyUrl=http://www.sxgcsy.top/shopp/common_receive.php?p_c=qilinbailin&returnUrl=http://www.sxgcsy.top&settleType=1&traceno=801180331184508579&3C25C905DA50D84A84A1725115777301
+-------------------
+-------------------
+2018-03-31 18:45:09
+发送加密值:ca555d935a6b6ace43067b832842278e
+-------------------
+-------------------
+2018-03-31 21:20:37
+{"op":"check_order_id","order_id":"123456789","password":"1"}
+-------------------
+-------------------
+2018-03-31 21:20:37
+checkOrderId:{"IsSuccess":false,"Message":"\u8ba2\u5355\u6216\u5bc6\u7801\u9519\u8bef"}
+-------------------

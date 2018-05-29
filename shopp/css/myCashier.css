@@ -1,0 +1,166 @@
+.mobile-header {
+  display: none;
+}
+/******firmOrder******/
+.firmOrder {
+  margin-top: 40px;
+}
+.firmOrder .tit {
+  font-size: 18px;
+  color: #111;
+  height: 36px;
+  line-height: 18px;
+  border-bottom: 1px solid #6d6d6d;
+}
+.firmOrder .orderInfo {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  height: 220px;
+  background: #fbfcff;
+  padding: 25px 45px;
+  line-height: 28px;
+  color: #777779;
+}
+.firmOrder .orderInfo .orderName span,
+.firmOrder .orderInfo .orderPrice span,
+.firmOrder .orderInfo .orderName span,
+.firmOrder .orderInfo .orderNum span {
+  padding-left: 20px;
+  color: #111;
+}
+.firmOrder .payWayList {
+  height: 295px;
+  border: 1px solid #e5e5e5;
+  padding: 30px 20px;
+}
+.firmOrder .payWayList .payWay {
+  height: 56px;
+  line-height: 56px;
+  padding: 0 20px;
+  margin-bottom: 23px;
+  border: 2px solid transparent;
+}
+.firmOrder .payWayList .payWay .way {
+  cursor: pointer;
+  text-indent: 35px;
+  background: url("../img/radio_off.png") no-repeat left center;
+}
+.firmOrder .payWayList .payWay .price {
+  display: none;
+}
+.firmOrder .payWayList .payWay .price .num {
+  font-size: 20px;
+  color: #e4393c;
+  font-weight: bold;
+}
+.firmOrder .payWayList .payWay.active {
+  border: 2px solid #c2d2ff;
+  border-radius: 4px;
+}
+.firmOrder .payWayList .payWay.active .way {
+  background: url("../img/radio_on.png") no-repeat left center;
+}
+.firmOrder .payWayList .payWay.active .price {
+  display: inline-block;
+}
+.firmOrder .payWayList .payWay2 {
+  height: 66px;
+  border-bottom: 1px solid #e1e1e1;
+}
+.firmOrder .payWayList .nowBuyBtn {
+  width: 160px;
+  height: 34px;
+  line-height: 34px;
+  background: #e4393c;
+  border-radius: 4px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 20px;
+}
+/******WAP******/
+@media only screen and (max-width: 768px) {
+  /******mobile-header******/
+  .mobile-header {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    line-height: .43rem;
+    height: .43rem;
+    font-size: .15rem;
+    text-align: center;
+    border-bottom: 1px solid #e1e1e1;
+    font-weight: bold;
+	background: #fff;
+  }
+  .mobile-header .goback {
+    display: inline-block;
+    position: absolute;
+    width: .1rem;
+    height: .15rem;
+    background: url("../img/goback.png") no-repeat center;
+    background-size: 100% 100%;
+    top: .15rem;
+    left: .15rem;
+  }
+  .mobile-header .gohome {
+    display: inline-block;
+    position: absolute;
+    width: .18rem;
+    height: .18rem;
+    background: url("../img/gohome.png") no-repeat center;
+    background-size: 100% 100%;
+    top: .13rem;
+    right: .15rem;
+  }
+  /******firmOrder******/
+  .firmOrder {
+    margin-top: .43rem;
+  }
+  .firmOrder .tit {
+    display: none;
+  }
+  .firmOrder .orderInfo {
+    margin: .58rem auto .13rem;
+    width: 3.45rem;
+    padding: .15rem;
+    line-height: .25rem;
+    height: 1.8rem;
+  }
+  .firmOrder .payWayList {
+    margin: 0 auto;
+    width: 3.45rem;
+    border: 0;
+    border-top: 1px solid #e1e1e1;
+  }
+  .firmOrder .payWayList .payWay {
+    height: .44rem;
+    line-height: .44rem;
+    border: .02rem solid transparent;
+    padding: 0 .1rem;
+  }
+  .firmOrder .payWayList .payWay .way {
+    text-indent: .15rem;
+    background-size: .1rem .1rem;
+  }
+  .firmOrder .payWayList .payWay .price .num {
+    font-size: .15rem;
+  }
+  .firmOrder .payWayList .payWay.active {
+    border: .02rem solid #c2d2ff;
+  }
+  .firmOrder .payWayList .payWay.active .way {
+    background-size: .1rem .1rem;
+  }
+  .firmOrder .payWayList .nowBuyBtn {
+    position: fixed;
+    width: 100%;
+    height: .5rem;
+    line-height: .5rem;
+    bottom: 0;
+    left: 0;
+  }
+}

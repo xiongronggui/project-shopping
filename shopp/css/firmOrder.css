@@ -1,0 +1,289 @@
+.mobile-header {
+  display: none;
+}
+/******firmOrder******/
+.firmOrder {
+  margin-top: 40px;
+}
+.firmOrder .tit {
+  font-size: 18px;
+  color: #111;
+  height: 36px;
+  line-height: 18px;
+  border-bottom: 1px solid #6d6d6d;
+}
+.firmOrder .orderInfo {
+  padding-bottom: 60px;
+}
+.firmOrder .orderInfo .goodsTable {
+  padding: 10px 0 35px;
+}
+.firmOrder .orderInfo .goodsTable .head {
+  line-height: 50px;
+}
+.firmOrder .orderInfo .goodsTable .head span {
+  color: #111!important;
+}
+.firmOrder .orderInfo .goodsTable .body {
+  padding: 35px 0;
+  background: #fbfcff;
+}
+.firmOrder .orderInfo .goodsTable .body > span > i {
+  display:none;
+  font-style: normal;
+}
+.firmOrder .orderInfo .goodsTable .goodsImg {
+  display: inline-block;
+  width: 160px;
+  text-align: center;
+}
+.firmOrder .orderInfo .goodsTable .goodsImg img {
+  width: 100px;
+  height: 100px;
+}
+.firmOrder .orderInfo .goodsTable .goodsName {
+  display: inline-block;
+  width: 163px;
+  text-align: left;
+  color: #575758;
+}
+.firmOrder .orderInfo .goodsTable .goodsUnitPrice {
+  display: inline-block;
+  width: 160px;
+  text-align: left;
+  color: #575758;
+}
+.firmOrder .orderInfo .goodsTable .goodsNum {
+  display: inline-block;
+  width: 120px;
+  text-align: left;
+  color: #575758;
+}
+.firmOrder .orderInfo .goodsTable .goodsAllPrice {
+  display: inline-block;
+  width: 160px;
+  text-align: center;
+  color: #e4393c;
+}
+.firmOrder .orderInfo .tradeTips {
+  color: #8e8e8e;
+  line-height: 20px;
+}
+.firmOrder .submitOrder {
+  text-align: right;
+  padding: 20px 0 0;
+}
+.firmOrder .submitOrder .actualMoney {
+  color: #111;
+  line-height: 60px;
+  height: 50px;
+}
+.firmOrder .submitOrder .actualMoney .mj {
+  color: #e4393c;
+  font-size: 24px;
+  font-weight: bold;
+}
+.firmOrder .submitOrder .equalRMB {
+  line-height: 32px;
+  color: #e4393c;
+  margin-bottom: 15px;
+}
+.firmOrder .submitOrder .submitBtn {
+  display: inline-block;
+  cursor: pointer;
+  width: 190px;
+  height: 38px;
+  line-height: 38px;
+  background: #e4393c;
+  color: #fff;
+  text-align: center;
+  font-size:16px;
+}
+
+.firmOrder .payWayList {
+  border: 1px solid #e5e5e5;
+  padding: 0 20px 30px;
+  margin-bottom: 40px;
+}
+.firmOrder .payWayList .payWay {
+  height: 56px;
+  line-height: 56px;
+  padding: 0 20px;
+  margin-top: 30px;
+  border: 2px solid transparent;
+}
+.firmOrder .payWayList .payWay .way {
+  cursor: pointer;
+  text-indent: 35px;
+  background: url("../img/radio_off.png") no-repeat left center;
+}
+.firmOrder .payWayList .payWay .price {
+  display: none;
+}
+.firmOrder .payWayList .payWay .price .num {
+  font-size: 20px;
+  color: #e4393c;
+  font-weight: bold;
+}
+.firmOrder .payWayList .payWay.active {
+  border: 2px solid #c2d2ff;
+  border-radius: 4px;
+}
+.firmOrder .payWayList .payWay.active .way {
+  background: url("../img/radio_on.png") no-repeat left center;
+}
+.firmOrder .payWayList .payWay.active .price {
+  display: inline-block;
+}
+.firmOrder .payWayList .payWay2 {
+  height: 66px;
+}
+.firmOrder .payWayList .nowBuyBtn {
+  width: 160px;
+  height: 34px;
+  line-height: 34px;
+  background: #e4393c;
+  border-radius: 4px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 20px;
+}
+/******WAP******/
+@media only screen and (max-width: 768px) {
+  /******mobile-header******/
+  .mobile-header {
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    line-height: .43rem;
+    height: .43rem;
+    font-size: .15rem;
+    text-align: center;
+    border-bottom: 1px solid #e1e1e1;
+    font-weight: bold;
+  background: #fff;
+  }
+  .mobile-header .goback {
+    display: inline-block;
+    position: absolute;
+    width: .1rem;
+    height: .15rem;
+    background: url("../img/goback.png") no-repeat center;
+    background-size: 100% 100%;
+    top: .15rem;
+    left: .15rem;
+  }
+  .mobile-header .gohome {
+    display: inline-block;
+    position: absolute;
+    width: .18rem;
+    height: .18rem;
+    background: url("../img/gohome.png") no-repeat center;
+    background-size: 100% 100%;
+    top: .13rem;
+    right: .15rem;
+  }
+  /******firmOrder******/
+  .firmOrder {
+    margin-top: .43rem;
+  }
+  .firmOrder .tit {
+    display: none;
+  }
+  .firmOrder .orderInfo {
+    padding: 0 .15rem;
+    border: 0;
+  }
+  .firmOrder .orderInfo .goodsTable {
+    padding: 0 0 .25rem;
+  }
+  .firmOrder .orderInfo .goodsTable .head {
+    display: none;
+  }
+  .firmOrder .orderInfo .goodsTable .body {
+  position:relative;
+  height: 1.3rem;
+  padding: .15rem 0;
+  background: transparent;
+  border-bottom: 1px solid #e1e1e1;
+  }
+  .firmOrder .orderInfo .goodsTable .body > span > i{
+    display: inline-block;
+  }
+  .firmOrder .orderInfo .goodsTable .body .goodsImg {
+  position:absolute;
+  left:0;
+  top:.15rem;
+    width: .8rem;
+    margin-right: .1rem;
+  }
+  .firmOrder .orderInfo .goodsTable .body .goodsImg img {
+    width: .8rem;
+    height: .8rem;
+    vertical-align: center;
+  }
+  .firmOrder .orderInfo .goodsTable .body .goodsName {
+  float:left;
+  width: 2.55rem;
+  line-height: .2rem;
+  padding-left: .9rem;
+  vertical-align: top;
+  }
+   .firmOrder .orderInfo .goodsTable .body .goodsUnitPrice{
+    float:left;
+    width:2.55rem;
+    line-height:.2rem;
+    padding-left: .9rem;
+   }
+   .firmOrder .orderInfo .goodsTable .body .goodsNum{
+    float:left;
+    width:2.55rem;
+    line-height:.2rem;
+    padding-left: .9rem;
+   }
+  .firmOrder .orderInfo .goodsTable .body .goodsAllPrice {
+    float:left;
+    line-height:.2rem;
+    padding-left: .9rem;
+    width: 3.55rem;
+    text-align: left;
+  }
+  .firmOrder .orderInfo .tradeTips {
+    font-size: .12rem;
+    color: #787878;
+    line-height: .22rem;
+  }
+  .firmOrder .submitOrder {
+    padding: 0 .15rem;
+  }
+  .firmOrder .submitOrder .actualMoney {
+    font-size: .14rem;
+    line-height: .4rem;
+    height: .3rem;
+  }
+  .firmOrder .submitOrder .actualMoney .mj {
+    font-size: .14rem;
+  }
+  .firmOrder .submitOrder .equalRMB {
+    height: .2rem;
+    line-height: .2rem;
+    font-size: .12rem;
+  }
+  .firmOrder .submitOrder .submitBtn {
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: .5rem;
+    line-height: .5rem;
+  font-size:.14rem;
+  }
+  .firmOrder .payWayList .payWay .price .num{
+  font-size: .14rem;
+  }
+}

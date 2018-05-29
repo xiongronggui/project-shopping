@@ -1,0 +1,63 @@
+{include file="header.html"}
+	<link rel="stylesheet" href="css/jquery.dataTables.css">
+	<script src="js/jquery.dataTables.min.js"></script>
+	<div class="main-content">
+		<div class="breadcrumbs">
+			权限列表
+		</div>
+		<div class="page-content">
+			<div class="retrieval">
+				<button class="btn new-btn" onclick="window.location.href='admin_action.php?op=add';">权限添加</button>
+				<div class="tablebox">
+					<table class="display" cellpadding="0" cellspacing="0" border="0" id="news">
+						<thead>
+							<tr>
+								<th>ID</th>
+								<th>权限名称</th>
+								<th>权限URL</th>
+								<th>父节点</th>
+								<th>状态</th>
+								<th>排序(越大越靠前)</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							{section name=show loop=$result}
+							<tr>
+								<td>{$result[show].id}</td>
+								<td>{$result[show].title}</td>
+								<td>{$result[show].url}</td>
+								<td>{$result[show].btitle}</td>
+								<td>
+									{if $result[show].fid}
+										{if $result[show].id != 4}
+											<a href="admin_action.php?id={$result[show].id}&op=save&t=status" onclick="return confirm('您确定要改变该权限状态吗？');">{$result[show].status_show}</a>
+										{else}
+											{$result[show].status_show}
+										{/if}
+									{/if}
+								</td>
+								<td>{$result[show].index}</td>
+								<td>
+									{if $result[show].fid}
+									<div>
+										<a href="admin_action.php?id={$result[show].id}&op=update">
+											<i class="icon-pen" title="修改"></i>
+										</a>
+										<a href="admin_action.php?id={$result[show].id}&op=del" onclick="return confirm('您确定要删除该权限吗？');">
+											<i class="icon-delete" title="删除"></i>
+										</a>
+									</div>
+									{/if}
+								</td>
+							</tr>
+							{/section}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
